@@ -1,0 +1,54 @@
+1.	float CalculateGPA(char grades[])
+2.	{ 
+3.	 float z=0.0;
+4.	 float gpa=0.0;
+5.	 int k=0;
+6.	 int len=0;
+7.	 int i=0;
+8.	 len = strlen(grades)-1;
+9.	 k=0;
+10.	 for(i=0;i<len;i++)
+11.	  {
+12.	  switch(grades[i])
+13.	  {
+14.	   case 'A':
+15.	     gpa=gpa+4.0;
+16.	     z=z+1.0;
+17.	     break;
+18.	   case 'B':
+19.	     gpa=gpa+3.0;
+20.	     z=z+1.0;
+21.	     break;
+22.	   case 'C':
+23.	     gpa=gpa+2.0;
+24.	     z=z+1.0;
+25.	     break;
+26.	   case 'D':
+27.	     gpa=gpa+1.0;
+28.	     z=z+1.0;
+29.	     break;
+30.	   case 'F':
+31.	     gpa=gpa+0.0;
+32.	     z=z+1.0;
+33.	     break;
+34.	    case 'I':
+35.	      k=1;
+36.	      break;
+37.	    case '*':
+38.	      break;
+39.	
+40.	    default:
+41.	      printf("wrong input grade");
+42.	      return -2;
+43.	      }
+44.	   }
+45.	   if(z==0&&k==1){
+46.	      return  -1;
+47.	   }else if(len==0){
+48.	    return -3;
+49.	   }
+50.	   gpa=gpa/z;
+51.	return gpa;
+52.	}
+53.	
+54.	
